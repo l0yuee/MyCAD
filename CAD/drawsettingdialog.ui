@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DrawSettingDialog</class>
+ <widget class="QDialog" name="DrawSettingDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>470</width>
+    <height>230</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>470</width>
+    <height>230</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>绘制设置</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="cad_res.qrc">
+    <normaloff>:/img/res/setting.png</normaloff>:/img/res/setting.png</iconset>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>画笔</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>风格：</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <property name="indent">
+               <number>-1</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox_pen_style">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QComboBox::AdjustToContents</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>NoPen</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>SolidLine</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>DashLine</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>DotLine</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>DashDotLine</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>DashDotDotLine</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>CustomDashLine</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>宽度：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_pen_width">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>颜色：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_pen_color">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>画笔颜色</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>画刷</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>风格：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox_brush_style">
+              <property name="sizeAdjustPolicy">
+               <enum>QComboBox::AdjustToContents</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>NoBrush</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>SolidPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dense1Pattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dense2Pattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dense3Pattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dense4Pattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dense5Pattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dense6Pattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dense7Pattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>HorPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VerPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>CrossPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>BDiagPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>FDiagPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>DiagCrossPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>LinearGradientPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ConicalGradientPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>RadialGradientPattern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>TexturePattern</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>颜色：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_brush_color">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>画刷颜色</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="cad_res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DrawSettingDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DrawSettingDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_pen_style</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>DrawSettingDialog</receiver>
+   <slot>pen_style_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_brush_style</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>DrawSettingDialog</receiver>
+   <slot>brush_style_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>370</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>465</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_pen_width</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>DrawSettingDialog</receiver>
+   <slot>pen_width_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>clicked(QAbstractButton*)</signal>
+   <receiver>DrawSettingDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>353</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>pen_style_changed(int)</slot>
+  <slot>brush_style_changed(int)</slot>
+  <slot>pen_width_changed(int)</slot>
+ </slots>
+</ui>

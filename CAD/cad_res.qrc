@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>res/ellipse.png</file>
+        <file>res/line.png</file>
+        <file>res/rect.png</file>
+        <file>res/setting.png</file>
+        <file>res/shape.png</file>
+        <file>res/support.png</file>
+        <file>res/selection.png</file>
+        <file>res/rotat_right.png</file>
+        <file>res/delete.png</file>
+        <file>res/recover.png</file>
+        <file>res/undo.png</file>
+        <file>res/file1.png</file>
+        <file>res/file2.png</file>
+        <file>res/save1.png</file>
+        <file>res/save2.png</file>
+        <file>res/logout.png</file>
+    </qresource>
+</RCC>
