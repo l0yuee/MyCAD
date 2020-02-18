@@ -33,11 +33,6 @@ CAD::CAD(QWidget *parent) :
     
     set_statusbar(tr("就绪"));
     
-    // 托盘
-    trayicon = new QSystemTrayIcon(QIcon(":/img/res/shape.png"), this);
-    trayicon->setContextMenu(ui->menu_5);
-    trayicon->show();
-    
     // 连接信号槽
     connect(ui->client_widget, &ClientWidget::update_statusbar, this, &CAD::set_statusbar);
 }
@@ -388,10 +383,4 @@ void CAD::on_action_aboutme_triggered()
 {
     AboutDialog dlg;
     dlg.exec();
-}
-
-
-void CAD::closeEvent(QCloseEvent *event)
-{
-    ui->client_widget->save_config();
 }

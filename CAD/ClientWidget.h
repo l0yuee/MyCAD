@@ -42,15 +42,10 @@ public:
     QStack<CommandObject *> wait4undo;
     QStack<CommandObject *> wait4recover;
     
-private:
-    const QString ini_file = "cadcfg.ini";
-    
 public:
     void save_data();
     void load_data();
     void clear_resource();
-    void load_config();
-    void save_config();
     
     // QWidget interface
 protected:

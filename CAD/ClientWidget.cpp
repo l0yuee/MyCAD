@@ -6,7 +6,6 @@
 #include "CommandAddOpera.h"
 #include "CommandMoveoOera.h"
 #include <QFileDialog>
-#include <QSettings>
 
 ClientWidget::ClientWidget(QWidget *parent) : QWidget(parent)
 {
@@ -15,7 +14,6 @@ ClientWidget::ClientWidget(QWidget *parent) : QWidget(parent)
     setPalette(pal);
     
     factory = new LineFactory();
-    load_config();
 }
 
 ClientWidget::~ClientWidget()
@@ -26,60 +24,6 @@ ClientWidget::~ClientWidget()
     for(auto &item : vector_shape) {
         delete item;
     }
-}
-
-void ClientWidget::load_config()
-{
-    QFile file(ini_file);
-    if(file.exists()) {
-        file.close();
-        // 存在读取
-        QSettings ini(ini_file, QSettings::IniFormat);
-        ini.beginGroup("pen");
-        // 画笔
-        QVariant qvariant;
-        qvariant = ini.value("style");
-        current_pen.setStyle((Qt::PenStyle)qvariant.toUInt());
-        
-        qvariant = ini.value("width");
-        current_pen.setWidth(qvariant.toInt());
-        
-        qvariant = ini.value("color");
-        current_pen.setColor(qvariant.value<QColor>());
-        
-        ini.endGroup();
-        
-        ini.beginGroup("brush");
-        // 画刷
-        qvariant = ini.value("style");
-        current_brush.setStyle((Qt::BrushStyle)qvariant.toUInt());
-        
-        qvariant = ini.value("color");
-        current_brush.setColor(qvariant.value<QColor>());
-        
-        ini.endGroup();
-    } else {
-        // 不存在则保存
-        file.close();
-        save_config();
-    }
-}
-
-void ClientWidget::save_config()
-{
-    QSettings ini(ini_file, QSettings::IniFormat);
-    ini.beginGroup("pen");
-    // 画笔
-    ini.setValue("style", QVariant((uint)current_pen.style()));
-    ini.setValue("width", (int)current_pen.width());
-    ini.setValue("color", current_pen.color());
-    ini.endGroup();
-    
-    ini.beginGroup("brush");
-    // 画刷
-    ini.setValue("style", (uint)current_brush.style());
-    ini.setValue("color", current_brush.color());
-    ini.endGroup();
 }
 
 void ClientWidget::save_data()

@@ -6,7 +6,6 @@
 #include <QStandardItemModel>
 #include "ShapeObject.h"
 #include "ClientWidget.h"
-#include <QSystemTrayIcon>
 
 
 namespace Ui {
@@ -69,13 +68,8 @@ private slots:
     
 private:
     Ui::CAD *ui;
-    QSystemTrayIcon *trayicon;
     DrawSettingDialog *draw_setting_dialog;
     QStandardItemModel *model_of_tree_view;
-    
-    // QWidget interface
-protected:
-    virtual void closeEvent(QCloseEvent *event) override;
 };
 
 #endif // CAD_H
